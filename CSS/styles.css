@@ -12,6 +12,21 @@
   --secondary-fonts: 'Raleway', sans-serif;
 }
 /* ====================== components================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
 .link {
   text-decoration: none;
 }
@@ -26,13 +41,48 @@
 
 .body {
   font-family: var(--main-fonts);
-
   background-color: var(--background-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ====================== end components================ */
 
 /* ======================header================ */
+
+.header-nav {
+  background-color: teal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 215px;
+  margin-right: 215px;
+}
+.main-navigation {
+  display: flex;
+}
+
 .logo-dark-theme {
   font-family: var(--secondary-fonts);
   font-weight: 700;
@@ -56,8 +106,26 @@
 .logo-item {
   color: var(--accent-color);
 }
+.logo-dark-theme {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.navigation-list {
+  display: flex;
+  margin-left: 90px;
+}
+
+.navigation-list .navigation-list-item + .navigation-list-item {
+  margin-left: 50px;
+}
 
 .navigation-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -69,8 +137,22 @@
 .navigation-link:focus {
   color: var(--accent-color);
 }
+.navigation-list .link.current {
+  color: var(--accent-color);
+}
 
+.contact-list {
+  margin-left: auto;
+  display: flex;
+}
+.contact-list .contact-item + .contact-item {
+  margin-left: 50px;
+}
 .contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -87,16 +169,30 @@
 /* ====================== end header================ */
 
 /* ====================== Hero================ */
+
+.hero {
+    text-align: center;
+    background-color: tomato;
+    }
+  
 .main-title {
+  box-sizing: border-box;
+  width: 700px;
+   
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
 
+  text-transform: uppercase;
+
   /* color: var(--secondary-text-color); */
 }
 
 .modal-btn {
+  min-width: 200px;
+  p
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -107,10 +203,6 @@
 
   cursor: pointer;
   font-family: inherit;
-}
-
-.navigation-list .link.current {
-  color: var(--accent-color);
 }
 
 /* ====================== end hero================ */
