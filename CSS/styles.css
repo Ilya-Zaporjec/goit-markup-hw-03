@@ -188,6 +188,7 @@ ol {
 /* ====================== Hero================ */
 
 .hero {
+  padding: 200px;
   text-align: center;
   background-color: #2f303a;
 }
@@ -205,7 +206,7 @@ ol {
 
   text-transform: uppercase;
 
-  /* color: var(--secondary-text-color); */
+  color: var(--secondary-text-color);
 }
 
 .modal-btn {
@@ -275,6 +276,7 @@ ol {
 
 /* ====================== Work================ */
 .work {
+  padding-top: 0;
   margin-left: auto;
   margin-right: auto;
 }
